@@ -1,23 +1,32 @@
+ 
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Fredoka, Nunito } from 'next/font/google'
 import './globals.css'
 
-const fredoka = Fredoka({ bsets: ['latin'],
+const fredoka = Fredoka({
+  subsets: ['latin'],
   variable: '--font-fredoka',
   weight: ['500', '600', '700'],
 })
-const nunito = Nunito({ subsets: ['latin'], variable: '--font-nunito' })
+
+const nunito = Nunito({
+  subsets: ['latin'],
+  variable: '--font-nunito',
+})
 
 export const metadata: Metadata = {
   title: {
     default: 'quizgum — Create & play quizzes',
     template: '%s · quizgum',
-  };
+  },
   description:
     'quizgum lets you build your own quizzes, share them with a 6-digit code, and see who tops the leaderboard.',
   generator: 'v0.app',
-},
+  verification: {
+    google: 'H_0jsTuyzJGE-fErzjQJudNqOvOEjIIFvkLlunxZkOA',
+  },
+}
 
 export const viewport: Viewport = {
   colorScheme: 'light',
@@ -40,3 +49,5 @@ export default function RootLayout({
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
+  )
+}
