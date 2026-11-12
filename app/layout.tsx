@@ -3,8 +3,7 @@ import type { Metadata, Viewport } from 'next'
 import { Fredoka, Nunito } from 'next/font/google'
 import './globals.css'
 
-const fredoka = Fredoka({
-  subsets: ['latin'],
+const fredoka = Fredoka({ bsets: ['latin'],
   variable: '--font-fredoka',
   weight: ['500', '600', '700'],
 })
@@ -14,7 +13,7 @@ export const metadata: Metadata = {
   title: {
     default: 'quizgum — Create & play quizzes',
     template: '%s · quizgum',
-  },
+  };
   description:
     'quizgum lets you build your own quizzes, share them with a 6-digit code, and see who tops the leaderboard.',
   generator: 'v0.app',
