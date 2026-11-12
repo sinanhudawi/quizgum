@@ -41,5 +41,7 @@ export default function RootLayout({
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
-  )
+  )verification: {
+  google: "H_0jsTuyzJGE-fErzjQJudNqOvOEjIIFvkLlunxZkOA",
+},<meta name="google-site-verification" content="H_0jsTuyzJGE-fErzjQJudNqOvOEjIIFvkLlunxZkOA" />
 }
