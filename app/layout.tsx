@@ -10,9 +10,13 @@ const fredoka = Fredoka({
   weight: ['500', '600', '700'],
 })
 
-const nunito = Nunito({ subsets: ['latin'], variable: '--font-nunito' })
+const nunito = Nunito({
+  subsets: ['latin'],
+  variable: '--font-nunito',
+})
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://v0-quizgum.vercel.app'),
   title: {
     default: 'quizgum — Create & play quizzes',
     template: '%s · quizgum',
@@ -20,6 +24,9 @@ export const metadata: Metadata = {
   description:
     'quizgum lets you build your own quizzes, share them with a 6-digit code, and see who tops the leaderboard.',
   generator: 'v0.app',
+  verification: {
+    google: 'H_0jsTuyzJGE-fErzjQJudNqOvOEjIIFvkLlunxZkOA',
+  },
 }
 
 export const viewport: Viewport = {
@@ -34,12 +41,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${fredoka.variable} ${nunito.variable}`}>
-      <head>
-        <meta
-          name="google-site-verification"
-          content="H_0jsTuyzJGE-fErzjQJudNqOvOEjIIFvkLlunxZkOA"
-        />
-      </head>
       <body className="min-h-dvh font-sans antialiased">
         <div
           aria-hidden="true"
