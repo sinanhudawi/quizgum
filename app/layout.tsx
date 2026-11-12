@@ -18,7 +18,9 @@ export const metadata: Metadata = {
   description:
     'quizgum lets you build your own quizzes, share them with a 6-digit code, and see who tops the leaderboard.',
   generator: 'v0.app',
-}
+}verification: {
+  google: "H_0jsTuyzJGE-fErzjQJudNqOvOEjIIFvkLlunxZkOA",
+},
 
 export const viewport: Viewport = {
   colorScheme: 'light',
