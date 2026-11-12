@@ -1,15 +1,29 @@
-
+ 
 import type { MetadataRoute } from 'next'
 
+const siteUrl = 'https://v0-quizgum.vercel.app'
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://v0-quizgum.vercel.app'
+  const now = new Date()
 
   return [
     {
-      url: baseUrl,
-      lastModified: new Date(),
+      url: siteUrl,
+      lastModified: now,
       changeFrequency: 'weekly',
       priority: 1,
+    },
+    {
+      url: `${siteUrl}/register`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${siteUrl}/sign-in`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.6,
     },
   ]
 }
