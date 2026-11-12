@@ -1,7 +1,7 @@
  
 import type { MetadataRoute } from 'next'
 
-const siteUrl = 'https://v0-quizgum.vercel.app'
+const siteUrl = 'https://quizgum.vercel.app'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date()
