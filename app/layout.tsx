@@ -18,8 +18,6 @@ export const metadata: Metadata = {
   description:
     'quizgum lets you build your own quizzes, share them with a 6-digit code, and see who tops the leaderboard.',
   generator: 'v0.app',
-}verification: {
-  google: "H_0jsTuyzJGE-fErzjQJudNqOvOEjIIFvkLlunxZkOA",
 },
 
 export const viewport: Viewport = {
@@ -43,5 +41,4 @@ export default function RootLayout({
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
-},<meta name="google-site-verification" content="H_0jsTuyzJGE-fErzjQJudNqOvOEjIIFvkLlunxZkOA" />
 }
